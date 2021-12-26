@@ -10,11 +10,12 @@ public class MeanArray
       double[] anArray = new double[arraySize];
       double meanNum = 0;
 
-      for (int i = 0; i < arraySize; i++)
-        {anArray[i] = in.nextDouble();
-          meanNum += anArray[i];}
+      for (int i = 0; i < arraySize; i++){
+        System.out.printf("%n%s %d %s%n", "Введите", i+1, "элемент массива:");
+        anArray[i] = in.nextDouble();
+        meanNum += anArray[i];}
 
-      meanNum = (meanNum / (double)arraySize);
+      meanNum = (meanNum / arraySize);
       for (double element : anArray){
          System.out.println(element*meanNum);
      }

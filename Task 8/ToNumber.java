@@ -8,11 +8,9 @@ public class ToNumber
       int mainNum = in.nextInt();
       int sum = 0;
 
-      for (int i = 1; i <= mainNum; i++)
-         {if (i %2 !=0)
-          {sum += i;}
-         }
-    //В условии не указано выводить сумму
+      for (int i = 1; i <= mainNum;) {
+            sum += i;
+            i = i+2;}
      System.out.println(sum);
-   }
+    }
 }

@@ -6,10 +6,16 @@ public class ConsoleOperation
      { 
        
     Scanner numbers = new Scanner(System.in);
+    System.out.println("Введите первое число:");
       float x = numbers.nextFloat();
+      System.out.println("Введите второе число:");
       float y = numbers.nextFloat();
+      System.out.print("Введите знак операции, которую хотите выполнить:");
       String sign = numbers.next();
 
+   if (y == 0) {
+      System.out.print("На ноль делить нельзя");}
+   else {
     switch (sign) {
      case "+":
         System.out.println(x+y);
@@ -27,4 +33,5 @@ public class ConsoleOperation
          break;
       }
      }
+   }
  }
