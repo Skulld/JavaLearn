@@ -1,12 +1,9 @@
 import java.util.Scanner;
-import java.util.Random;
 
 public class Riddle
 {
     public static void main (String [] args) {
         String answer;
-        String[] clues = new String[]{"Подсказка 1", "Подсказка 2", "Подсказка 3"};
-        Random random = new Random();
         boolean itsright = false;
         boolean clueUse = false;
         System.out.println ("Сидит дед, во сто шуб одет, кто его раздевает, тот слезы проливает");
@@ -24,8 +21,9 @@ public class Riddle
                     break;
                 case ("Подсказка"):
                     if (i == 1){
-                        System.out.println(clues[random.nextInt(clues.length+1)]);
-                        clueUse = true;}
+                        System.out.println("Подсказка");
+                        clueUse = true;
+                        i--;}
                     else {System.out.println("Подсказка уже недоступна");};
                     break;
                 default:
@@ -34,7 +32,7 @@ public class Riddle
                         itsright = true;
                         break;}
                     else {System.out.println("Подумай еще!");
-                    break;}
+                        break;}
             }
         }
     }
