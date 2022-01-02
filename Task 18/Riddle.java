@@ -24,7 +24,8 @@ public class Riddle
                         System.out.println("Подсказка");
                         clueUse = true;
                         i--;}
-                    else {System.out.println("Подсказка уже недоступна");};
+                    else {System.out.println("Подсказка уже недоступна");
+                        i--;};
                     break;
                 default:
                     if ((answer != "Заархивированный вирус") & ((i == 3) || (clueUse == true))) {
